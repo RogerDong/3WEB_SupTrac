@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    base(href='/')
+    link(rel='stylesheet', href='/css/style.css')
+    script(src='/js/angular.min.js')
+    script(src='/js/angular-route.min.js')
+    script(src='/js/app.js')
+    script(src='/js/appRoute.js')
+    script(src='/js/controller/controller.js')
+    script(src='/js/service/TicketService.js')
+
+  body(ng-app='supTrac')
+    include ./includes/header.pug
+    block content
+    include ./includes/footer.pug

@@ -1,0 +1,18 @@
+<div ng-controller='ticketsCtrl'>
+  <table>
+    <tr>
+      <th>Summary</th>
+      <th>Priority</th>
+      <th>Reported</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat='ticket in tickets'>
+      <td>{{ ticket.summary }}</td>
+      <td>{{ ticket.priority }}</td>
+      <td>{{ ticket.reported }}</td>
+      <td>{{ ticket.status }}</td>
+      <td><a href='#/ticket/{{ ticket._id }}'>Show</a></td>
+    </tr>
+  </table>
+</div>

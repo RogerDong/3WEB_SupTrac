@@ -1,0 +1,18 @@
+extends ./layout.pug
+block content
+  div(ng-controller='ticketsCtrl')
+    table
+      tr
+        th Ticket id
+        th Summary
+        th Priority
+        th Reported
+        th Status
+        th Action
+      tr(ng-repeat='t in tickets')
+        td {{ t.id }}
+        td {{ t.summary }}
+        td {{ t.priority }}
+        td {{ t.reporter }}
+        td {{ t.status }}
+        td {{ t.action }}

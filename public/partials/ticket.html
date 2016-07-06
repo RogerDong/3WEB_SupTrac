@@ -1,0 +1,46 @@
+<div ng-controller='ticketCtrl'>
+  <h2>Ticket #{{ ticket._id }}</h2>
+  <table style="text-align:left;">
+    <tr>
+      <td>
+        <span>{{ ticket.summary }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>Opend: {{ ticket.creationDate }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>Reported by</span>{{ reporter.username }}
+      </td>
+      <td>
+        <span>Owned by</span>{{ developer.username }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>Priority</span>{{ ticket.priority }}
+      </td>
+      <td>
+        <span>Status</span>{{ ticket.status }}
+      </td>
+    </tr>
+    <tr>
+      <span>Description</span>
+      <p>{{ ticket.description }}</p>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+  <table ng-repeat='comment in comments'>
+    <tr>
+      <td><span>Posted the: {{ comment.creationDate }}</span></td>
+    </tr>
+    <tr>
+        <td><p>{{ comment.content }}</p></td>
+    </tr>
+  </table>
+  <a>add comment</a>
+</div>
